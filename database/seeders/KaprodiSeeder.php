@@ -13,9 +13,16 @@ class KaprodiSeeder extends Seeder
      */
     public function run(): void
     {
+        // Kaprodi::create([
+        //     'nidn' => '123456789012',
+        //     'kode_prodi' => 'IFS1',
+        //     'awal_jabatan' => '2024-08-10',
+        //     'akhir_jabatan' => '2026-08-10',
+        //     'created_at' => now(),
+        // ]);
         Kaprodi::create([
-            'nidn' => '123456789012',
-            'kode_prodi' => 'IFS1',
+            'nidn' => '123456789100',
+            'kode_prodi' => 'KIMS1',
             'awal_jabatan' => '2024-08-10',
             'akhir_jabatan' => '2026-08-10',
             'created_at' => now(),

@@ -41,8 +41,13 @@ class IRSController extends Controller
             return redirect()->back()->with('error', 'Registrasi Terlebih dahulu');
         }
 
+        // prodi mhs
+        $prodi = $mahasiswa->kode_prodi;
+
         // Get all Mata Kuliah for the semester
-        $mataKuliah = MataKuliah::where('semester', $semesterMHS)->get();
+        $mataKuliah = MataKuliah::where('semester', $semesterMHS)
+                    ->where('kode_prodi', $prodi)
+                    ->get();
     
         // Get all Jadwal based on Mata Kuliah kode_mk
         // $jadwals = Jadwal::whereIn('kode_mk', $mataKuliah->pluck('kode_mk'))->get();
